@@ -1,5 +1,9 @@
 import axios from 'axios';
 import constants from 'Config/constants';
+import Data from 'Config/data';
+
+
+
 
 const axiosClient = axios.create();
 
@@ -24,4 +28,8 @@ export function patchRequest(URL, payload) {
 
 export function deleteRequest(URL) {
   return axiosClient.delete(`/${URL}`).then(response => response);
+}
+
+export function getProducts(){
+  return Data
 }
